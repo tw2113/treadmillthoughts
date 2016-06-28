@@ -1,0 +1,38 @@
+{
+    "name": "Treadmill Thoughts",
+    "description": "Random thoughts that occur during various cardio activity",
+    "homepage": "https://github.com/tw2113/",
+    "type": "project",
+    "keywords": [ "", "", "slim" ],
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Michael Beckwith",
+        "email": "tw2113@gmail.com",
+        "homepage": "https://github.com/tw2113/"
+      }
+    ],
+    "support": {
+      "issues": "https://github.com/tw2113//issues"
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "entomb/slim-json-api": "^1.1",
+        "aura/sql": "^2.4",
+        "aura/sqlquery": "^2.4",
+        "league/plates": "^3.1",
+        "adamwathan/form": "^0.5",
+        "respect/validation": "^0.9.1",
+        "monolog/monolog": "^1.17",
+        "vlucas/phpdotenv": "^2.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.5.0",
+        "fzaninotto/faker": "1.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "tw2113\\treadmill\\": "classes"
+        }
+    }
+}
