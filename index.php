@@ -9,15 +9,17 @@ use \AdamWathan\Form\FormBuilder as FormBuilder;
 require 'vendor/autoload.php';
 
 $app = new Slim\App(
-	[
-		'debug'       => true,
-		'log.enabled' => true
-	]
+    [
+        'debug'       => true,
+        'log.enabled' => true,
+    ]
 );
 
-# Add so we do not need to instantiate everywhere.
-$app->plates = new Plates( './templates' );
-/*$app->config = require 'config/config.php'; */
+// Add so we do not need to instantiate everywhere.
+$app->plates = new Plates('./templates');
+/*
+ * $app->config = require 'config/config.php';
+ */
 
 $app->get('/', function ($request, $response) {
     $response->getBody()->write('This is a treadmill thought.');
