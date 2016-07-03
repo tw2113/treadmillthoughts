@@ -21,8 +21,11 @@ $app->plates = new Plates('./templates');
  * $app->config = require 'config/config.php';
  */
 
-$app->get('/', function ($request, $response) {
-    $response->getBody()->write('This is a treadmill thought.');
+// View page.
+$app->get('/[{page}]', function ($request, $response, $args) {
+    $num = ( isset($args['page']) ) ? (string) $args['page'] : '';
+    // Display 5 at a time. pagination that provides offset for db query.
+    $response->getBody()->write('This is a treadmill thought.'. $num);
 
     return $response;
 });
